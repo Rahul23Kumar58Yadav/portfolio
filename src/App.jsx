@@ -548,7 +548,7 @@ MongoDB, Python, and cloud tools to create real-world, scalable digital products
               >
                 View My Work
               </Button>
-              <a href="/rahul2.pdf" download>
+              <a href="/rahul2_resume.pdf" download>
                 <Button variant="outline">
                   <Download size={20} className="mr-2" />
                   Download CV
