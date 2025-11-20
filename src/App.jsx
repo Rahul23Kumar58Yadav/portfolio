@@ -26,8 +26,7 @@ import {
   TrendingUp,
   Globe,
 } from "lucide-react";
-import emailjs from "@emailjs/browser";
-import "./App.css";
+import "./App.css"
 
 // Theme Context
 const ThemeContext = createContext();
@@ -75,16 +74,7 @@ const projectsData = [
       "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
     github:
       "https://github.com/Rahul23Kumar58Yadav/DeepFake-Detection-For-Evidence",
-    demo: "https://demo.example.com",
     featured: true,
-    features: [
-      "Video DeepFake Detection (CNN / EfficientNet models)",
-      "Audio Fake Detection (Spectrogram + Transformer models)",
-      "Confidence Score Output",
-      "Supports MP4, WAV, MP3 and more",
-      "Batch testing mode for datasets",
-      "Evidence-oriented results for digital forensics",
-    ],
   },
   {
     id: 2,
@@ -109,16 +99,7 @@ const projectsData = [
     image:
       "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80",
     github: "https://github.com/Rahul23Kumar58Yadav/Blogging-Plateform",
-    demo: "https://demo.example.com",
     featured: false,
-    features: [
-      "Secure User Authentication (Signup/Login/Logout)",
-      "Create, Edit, and Delete Blog Posts",
-      "Rich Text Editor with Formatting Tools",
-      "Responsive UI Design for all devices",
-      "Search Blogs by Keyword",
-      "Comment System (Optional/If implemented)",
-    ],
   },
   {
     id: 3,
@@ -143,15 +124,7 @@ const projectsData = [
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
     github: "https://github.com/Rahul23Kumar58Yadav/Excel-Analytics-Dashboard",
-    demo: "https://demo.example.com",
     featured: true,
-    features: [
-      "Upload Excel (.xlsx) or CSV Files",
-      "Interactive Data Visualization",
-      "Filtering & Sorting Tools",
-      "Responsive Design for all Devices",
-      "Simple and User-Friendly Interface",
-    ],
   },
   {
     id: 4,
@@ -171,18 +144,7 @@ const projectsData = [
     ],
     image: "https://plus.unsplash.com/premium_photo-1666299677059-54f840ab8fa0",
     github: "https://github.com/Rahul23Kumar58Yadav/Health-Calculators",
-    demo: "https://demo.example.com",
     featured: false,
-    features: [
-      "BMI Calculator",
-      "BMR Calculator",
-      "Body Fat Calculator",
-      "Body Shape Calculator",
-      "Calorie Calculator",
-      "Diabetes Risk Calculator",
-      "Clean and Responsive UI",
-      "Fast and Lightweight Components",
-    ],
   },
   {
     id: 5,
@@ -202,15 +164,7 @@ const projectsData = [
     image:
       "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&q=80",
     github: "https://github.com/Rahul23Kumar58Yadav/Smart-Resume-Generator",
-    demo: "https://demo.example.com",
     featured: false,
-    features: [
-      "AI-Powered Resume Generation",
-      "User-Friendly Streamlit Interface",
-      "Download Resume as Text File",
-      "Custom Inputs (Name, Job Title)",
-      "Secure API Key Handling",
-    ],
   },
   {
     id: 6,
@@ -226,7 +180,7 @@ const projectsData = [
       "NLTK / SpaCy",
       "Pandas",
       "NumPy",
-      "React.js (if frontend used)",
+      "React.js",
       "Flask / FastAPI",
       "Git",
       "GitHub",
@@ -234,16 +188,7 @@ const projectsData = [
     image:
       "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
     github: "https://github.com/Rahul23Kumar58Yadav/Fake-News-Detection",
-    demo: "https://demo.example.com",
     featured: true,
-    features: [
-      "Machine Learning–Based Fake News Classification",
-      "NLP Preprocessing (Tokenization, Lemmatization, Stopword Removal)",
-      "TF-IDF / Word Embedding Feature Extraction",
-      "Real vs Fake Prediction with Confidence Score",
-      "Dataset Training & Evaluation",
-      "Optional Web Interface for Input & Results",
-    ],
   },
 ];
 
@@ -380,7 +325,7 @@ const Footer = ({ setCurrentPage }) => {
               <h3 className="footer-title">Rahul Kumar Yadav</h3>
             </div>
             <p className="footer-text">
-              Full Stack Developer (MERN) & AI Enthusiast. Building innovative solutions with modern technologies. Let's create something amazing together.
+              Full Stack Developer (MERN) & AI Enthusiast. Building innovative solutions with modern technologies.
             </p>
             <div className="social-links">
               <a 
@@ -388,7 +333,6 @@ const Footer = ({ setCurrentPage }) => {
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="GitHub"
               >
                 <Github size={20} />
               </a>
@@ -397,122 +341,46 @@ const Footer = ({ setCurrentPage }) => {
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
               </a>
               <a 
                 href="mailto:kryadavrahul@gmail.com" 
                 className="social-icon"
-                aria-label="Email"
               >
                 <Mail size={20} />
-              </a>
-              <a 
-                href="https://github.com/Rahul23Kumar58Yadav" 
-                className="social-icon"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Portfolio"
-              >
-                <Globe size={20} />
               </a>
             </div>
           </div>
           <div className="footer-section">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links" style={{ listStyle: 'none' }}>
-              <li 
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setCurrentPage("Home");
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <ArrowRight size={16} /> Home
-              </li>
-              <li 
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setCurrentPage("About");
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <ArrowRight size={16} /> About
-              </li>
-              <li 
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setCurrentPage("Projects");
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <ArrowRight size={16} /> Projects
-              </li>
-              <li 
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  setCurrentPage("Contact");
-                  window.scrollTo(0, 0);
-                }}
-              >
-                <ArrowRight size={16} /> Contact
-              </li>
+              {["Home", "About", "Projects", "Contact"].map(page => (
+                <li 
+                  key={page}
+                  onClick={() => {
+                    setCurrentPage(page);
+                    window.scrollTo(0, 0);
+                  }}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <ArrowRight size={16} /> {page}
+                </li>
+              ))}
             </ul>
           </div>
           <div className="footer-section">
             <h4 className="footer-heading">Services</h4>
             <ul className="footer-links">
-              <li>
-                <ArrowRight size={16} /> Web Development
-              </li>
-              <li>
-                <ArrowRight size={16} /> AI & ML Solutions
-              </li>
-              <li>
-                <ArrowRight size={16} /> Full Stack (MERN)
-              </li>
-              <li>
-                <ArrowRight size={16} /> UI/UX Design
-              </li>
+              <li><ArrowRight size={16} /> Web Development</li>
+              <li><ArrowRight size={16} /> AI & ML Solutions</li>
+              <li><ArrowRight size={16} /> Full Stack (MERN)</li>
+              <li><ArrowRight size={16} /> UI/UX Design</li>
             </ul>
-          </div>
-          <div className="footer-section">
-            <h4 className="footer-heading">Get In Touch</h4>
-            <p className="footer-text-small">Have a project in mind? Let's talk!</p>
-            <div className="newsletter-form">
-              <input type="email" placeholder="Your email" />
-              <button 
-                className="newsletter-btn"
-                onClick={() => setCurrentPage("Contact")}
-              >
-                <ArrowRight size={20} />
-              </button>
-            </div>
           </div>
         </div>
         <div className="footer-bottom">
           <p>&copy; 2025 Rahul Kumar Yadav. All rights reserved.</p>
-          <div className="footer-bottom-links">
-            <a 
-              href="https://github.com/Rahul23Kumar58Yadav"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a 
-              href="https://www.linkedin.com/in/rahul-kumar-yadav-5a18392b2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-          </div>
         </div>
       </div>
     </footer>
@@ -533,12 +401,12 @@ const HomePage = ({ setCurrentPage }) => {
               Hi, I'm <span className="gradient-text">Rahul Kumar Yadav</span>
             </h1>
             <p className="hero-subtitle">
-              Full Stack Developer(MERN) & AI Enthusiast
+              Full Stack Developer (MERN) & AI Enthusiast
             </p>
             <p className="hero-description">
               Full Stack Developer (MERN) specializing in building secure, high-performance web applications and AI-powered 
-solutions. I combine modern frontend design with strong backend engineering, working across React, Node.js, 
-MongoDB, Python, and cloud tools to create real-world, scalable digital products.
+              solutions. I combine modern frontend design with strong backend engineering, working across React, Node.js, 
+              MongoDB, Python, and cloud tools to create real-world, scalable digital products.
             </p>
             <div className="hero-buttons">
               <Button
@@ -548,12 +416,10 @@ MongoDB, Python, and cloud tools to create real-world, scalable digital products
               >
                 View My Work
               </Button>
-              <a href="/rahul2_resume.pdf" download>
-                <Button variant="outline">
-                  <Download size={20} className="mr-2" />
-                  Download CV
-                </Button>
-              </a>
+              <Button variant="outline">
+                <Download size={20} className="mr-2" />
+                Download CV
+              </Button>
             </div>
             <div className="hero-tech-stack">
               <span className="tech-stack-label">Tech Stack:</span>
@@ -607,9 +473,7 @@ MongoDB, Python, and cloud tools to create real-world, scalable digital products
             ].map((item, i) => (
               <div
                 key={i}
-                className={`feature-card feature-card-${item.color} delay-${
-                  i + 1
-                }`}
+                className={`feature-card feature-card-${item.color} delay-${i + 1}`}
               >
                 <div className="feature-icon-wrapper">
                   <item.icon className="feature-icon" size={32} />
@@ -642,12 +506,14 @@ MongoDB, Python, and cloud tools to create real-world, scalable digital products
                 <div
                   key={project.id}
                   className={`featured-project-card delay-${i + 1}`}
+                  onClick={() => window.open(project.github, '_blank', 'noopener,noreferrer')}
+                  style={{ cursor: 'pointer' }}
                 >
                   <div className="featured-project-image">
                     <img src={project.image} alt={project.title} />
                     <div className="featured-project-overlay">
                       <button className="overlay-btn">
-                        View Project <ExternalLink size={16} />
+                        View on GitHub <Github size={16} />
                       </button>
                     </div>
                   </div>
@@ -706,39 +572,18 @@ const AboutPage = () => {
       title: "Blockchain Course Certified",
       company: "NPTEL — Ministry of Education",
       desc: "Completed certification in Blockchain fundamentals, smart contracts, and decentralized systems.",
-      current: false,
     },
     {
       year: "2024",
       title: "Web Development Intern",
       company: "Teachnook",
       desc: "Contributed to frontend and full-stack projects, strengthening practical development and teamwork skills.",
-      current: false,
     },
     {
       year: "2025",
       title: "Web Development Intern",
       company: "Zidio Development",
       desc: "Worked on real-world client projects, building responsive UIs and improving backend APIs.",
-      current: false,
-    },
-  ];
-
-  const achievements = [
-    {
-      icon: <Award />,
-      title: "Blockchain Certification",
-      desc: "NPTEL – Ministry of Education, Govt. of India",
-    },
-    {
-      icon: <TrendingUp />,
-      title: "Web Development Intern",
-      desc: "Teachnook — Frontend & Full-Stack Projects",
-    },
-    {
-      icon: <Star />,
-      title: "Web Development Intern",
-      desc: "Zidio Development — Real-world Client Projects",
     },
   ];
 
@@ -757,16 +602,6 @@ const AboutPage = () => {
           className={`intro-section ${isVisible1 ? "visible" : ""}`}
         >
           <div className="intro-grid">
-            <div className="intro-image">
-              <img
-                src="rahul.jpg"
-                alt="Profile"
-              />
-              <div className="intro-image-badge">
-                <CheckCircle size={20} />
-                <span>Available for hire</span>
-              </div>
-            </div>
             <div className="intro-content">
               <h2 className="intro-heading">Hello! I'm Rahul</h2>
               <p className="intro-text">
@@ -828,21 +663,6 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <div className="achievements-section">
-          <div className="section-header">
-            <h2 className="section-title">Achievements & Certifications</h2>
-          </div>
-          <div className="achievements-grid">
-            {achievements.map((item, i) => (
-              <div key={i} className="achievement-card">
-                <div className="achievement-icon">{item.icon}</div>
-                <h3 className="achievement-title">{item.title}</h3>
-                <p className="achievement-desc">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         <div
           ref={ref3}
           className={`timeline-section ${isVisible3 ? "visible" : ""}`}
@@ -857,9 +677,6 @@ const AboutPage = () => {
                 <div className="timeline-content">
                   <div className="timeline-header">
                     <span className="timeline-year">{item.year}</span>
-                    {item.current && (
-                      <span className="timeline-current">Current</span>
-                    )}
                   </div>
                   <h3 className="timeline-title">{item.title}</h3>
                   <p className="timeline-company">{item.company}</p>
@@ -878,18 +695,23 @@ const AboutPage = () => {
 const ProjectCard = ({ project }) => {
   const [ref, isVisible] = useScrollReveal();
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    window.open(project.github, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <div ref={ref} className={`project-card ${isVisible ? "visible" : ""}`}>
-      <div className="project-image">
+      <div className="project-image" onClick={handleClick} style={{ cursor: 'pointer' }}>
         <img src={project.image} alt={project.title} />
         <div className="project-overlay">
           <div className="project-overlay-content">
-            <button className="overlay-btn-ghost">
+            <button 
+              className="overlay-btn-primary"
+              onClick={handleClick}
+            >
               <Github size={20} />
-            </button>
-            <button className="overlay-btn-primary">
-              <ExternalLink size={20} />
-              View Demo
+              View on GitHub
             </button>
           </div>
         </div>
@@ -911,7 +733,7 @@ const ProjectCard = ({ project }) => {
         <h3 className="project-title">{project.title}</h3>
         <p className="project-desc">{project.description}</p>
         <div className="project-tech">
-          {project.techStack.map((tech, i) => (
+          {project.techStack.slice(0, 4).map((tech, i) => (
             <span key={i} className="tech-tag">
               <Tag size={12} />
               {tech}
@@ -967,7 +789,7 @@ const ProjectsPage = () => {
               <Search className="search-icon" size={20} />
               <input
                 type="text"
-                placeholder="Search projects by name, description, or technology..."
+                placeholder="Search projects..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="search-input"
@@ -1042,82 +864,25 @@ const ProjectsPage = () => {
 const ContactPage = () => {
   const [ref, isVisible] = useScrollReveal();
   const [formData, setFormData] = useState({
-    from_name: "",
-    from_email: "",
+    name: "",
+    email: "",
     subject: "",
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
-  const [sending, setSending] = useState(false);
-  const [error, setError] = useState("");
 
-  // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init("UkSMDR-6L-LyzoeOV");
-  }, []);
-
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setSending(true);
-    setError("");
-
-    try {
-      // Send email using EmailJS
-      const result = await emailjs.send(
-        "service_mkczo9b",  // Service ID
-        "template_0ige6k4", // Template ID
-        {
-          from_name: formData.from_name,
-          from_email: formData.from_email,
-          subject: formData.subject,
-          message: formData.message,
-        }
-      );
-
-      console.log("Email sent successfully:", result);
-      setSubmitted(true);
-      setSending(false);
-
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setSubmitted(false);
-        setFormData({ from_name: "", from_email: "", subject: "", message: "" });
-      }, 3000);
-
-    } catch (error) {
-      console.error("Email send failed:", error);
-      setError("Failed to send message. Please try again.");
-      setSending(false);
-    }
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }, 3000);
   };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const contactMethods = [
-    {
-      icon: <Mail size={24} />,
-      label: "Email",
-      value: "kryadavrahul@gmail.com",
-      href: "mailto:kryadavrahul@gmail.com",
-      color: "blue",
-    },
-    {
-      icon: <Github size={24} />,
-      label: "GitHub",
-      value: "@rahul",
-      href: "https://github.com/Rahul23Kumar58Yadav/Fake-News-Detection",
-      color: "dark",
-    },
-    {
-      icon: <Linkedin size={24} />,
-      label: "LinkedIn",
-      value: "@rahul",
-      href: "https://www.linkedin.com/in/rahul-kumar-yadav-5a18392b2",
-      color: "linkedin",
-    },
-  ];
 
   return (
     <div className="page contact-page">
@@ -1125,8 +890,7 @@ const ContactPage = () => {
         <div className="contact-hero">
           <h1 className="page-title">Get In Touch</h1>
           <p className="page-subtitle">
-            Have a project in mind or want to collaborate? I'd love to hear from
-            you!
+            Have a project in mind? Let's talk!
           </p>
         </div>
 
@@ -1156,42 +920,28 @@ const ContactPage = () => {
                       as possible
                     </p>
                   </div>
-                  {error && (
-                    <div style={{
-                      padding: '12px',
-                      background: '#fee',
-                      border: '1px solid #fcc',
-                      borderRadius: '8px',
-                      color: '#c33',
-                      marginBottom: '20px'
-                    }}>
-                      {error}
-                    </div>
-                  )}
                   <form onSubmit={handleSubmit} className="contact-form">
                     <div className="form-row">
                       <div className="form-group">
                         <label>Name *</label>
                         <input
                           type="text"
-                          name="from_name"
-                          value={formData.from_name}
+                          name="name"
+                          value={formData.name}
                           onChange={handleChange}
                           required
-                          placeholder="Ram"
-                          disabled={sending}
+                          placeholder="Your Name"
                         />
                       </div>
                       <div className="form-group">
                         <label>Email *</label>
                         <input
                           type="email"
-                          name="from_email"
-                          value={formData.from_email}
+                          name="email"
+                          value={formData.email}
                           onChange={handleChange}
                           required
-                          placeholder="ram@example.com"
-                          disabled={sending}
+                          placeholder="your@email.com"
                         />
                       </div>
                     </div>
@@ -1204,7 +954,6 @@ const ContactPage = () => {
                         onChange={handleChange}
                         required
                         placeholder="Project Discussion"
-                        disabled={sending}
                       />
                     </div>
                     <div className="form-group">
@@ -1216,7 +965,6 @@ const ContactPage = () => {
                         required
                         rows={6}
                         placeholder="Tell me about your project..."
-                        disabled={sending}
                       />
                     </div>
                     <Button
@@ -1224,7 +972,7 @@ const ContactPage = () => {
                       className="submit-btn"
                       icon={<ArrowRight size={20} />}
                     >
-                      {sending ? "Sending..." : "Send Message"}
+                      Send Message
                     </Button>
                   </form>
                 </>
@@ -1239,23 +987,46 @@ const ContactPage = () => {
                 Feel free to reach out through any of these channels
               </p>
               <div className="contact-methods">
-                {contactMethods.map((method, i) => (
-                  <a
-                    key={i}
-                    href={method.href}
-                    className="contact-method"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div className={`contact-icon contact-icon-${method.color}`}>
-                      {method.icon}
-                    </div>
-                    <div>
-                      <p className="method-label">{method.label}</p>
-                      <p className="method-value">{method.value}</p>
-                    </div>
-                  </a>
-                ))}
+                <a
+                  href="mailto:kryadavrahul@gmail.com"
+                  className="contact-method"
+                >
+                  <div className="contact-icon contact-icon-blue">
+                    <Mail size={24} />
+                  </div>
+                  <div>
+                    <p className="method-label">Email</p>
+                    <p className="method-value">kryadavrahul@gmail.com</p>
+                  </div>
+                </a>
+                <a
+                  href="https://github.com/Rahul23Kumar58Yadav"
+                  className="contact-method"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="contact-icon contact-icon-dark">
+                    <Github size={24} />
+                  </div>
+                  <div>
+                    <p className="method-label">GitHub</p>
+                    <p className="method-value">@Rahul23Kumar58Yadav</p>
+                  </div>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/rahul-kumar-yadav-5a18392b2"
+                  className="contact-method"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="contact-icon contact-icon-linkedin">
+                    <Linkedin size={24} />
+                  </div>
+                  <div>
+                    <p className="method-label">LinkedIn</p>
+                    <p className="method-value">Rahul Kumar Yadav</p>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -1283,33 +1054,6 @@ const ContactPage = () => {
                 <div className="availability-feature">
                   <CheckCircle size={16} />
                   <span>Remote & on-site</span>
-                </div>
-              </div>
-              <div className="tech-tags">
-                {["React", "Python", "AI/ML", "Node.js", "AWS"].map(
-                  (tech, i) => (
-                    <span key={i} className="tech-badge">
-                      {tech}
-                    </span>
-                  )
-                )}
-              </div>
-            </div>
-
-            <div className="working-hours-card">
-              <h4>Working Hours</h4>
-              <div className="working-hours">
-                <div className="working-hour">
-                  <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
-                </div>
-                <div className="working-hour">
-                  <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
-                </div>
-                <div className="working-hour">
-                  <span>Sunday</span>
-                  <span>Closed</span>
                 </div>
               </div>
             </div>
